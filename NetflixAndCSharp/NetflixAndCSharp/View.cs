@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace NetflixAndCSharp
 {
-    class View
+    public class View
     {
+        public void PrintOutGenres()
+        {
+            
+        }
+
+        public void PrintOutGenreTitles()
+        {
+            
+        }
     }
 }

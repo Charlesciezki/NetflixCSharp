@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace NetflixAndCSharp
 {
-    class episode
+    public class episode
     {
+        string rating;
     }
 }
