@@ -19,5 +19,6 @@ namespace NetflixAndCSharp
 //-Create the genres: All, Romance, Action, Comedy.They need to share some titles (such as Romantic Comedies) by reference, not by duplicating the title itself.
     public class genre
     {
+        List<Title> TitleList = new List<Title>();
     }
 }
