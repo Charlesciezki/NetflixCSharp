@@ -17,8 +17,8 @@ namespace NetflixAndCSharp
 //      o For example, title Die Hard and genre Comedy would return a list of all comedy films and Die Hard.
 
 //-Create the genres: All, Romance, Action, Comedy.They need to share some titles (such as Romantic Comedies) by reference, not by duplicating the title itself.
-    public class genre
+    public class Genre
     {
-        List<Title> TitleList = new List<Title>();
+        List<Title> TitleList = new List<Title> {};
     }
 }

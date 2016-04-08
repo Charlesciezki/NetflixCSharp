@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace NetflixAndCSharp
 {
-    public class movie : Title
+    public class Movie : Title
     {
         //-Overrides ToString() method to return a string of the name and duration of the movie
-        string duration;
+        public string Duration;
+
+        public Movie(string name, string rating, string duration)
+        {
+            Name = name;
+            Rating = rating;
+            Duration = duration;
+        }
     }
 }
