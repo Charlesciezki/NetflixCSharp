@@ -8,14 +8,21 @@ namespace NetflixAndCSharp
 {
     public class Movie : Title
     {
-        //-Overrides ToString() method to return a string of the name and duration of the movie
-        public string Duration;
+        public int Duration { get; set; }
 
-        public Movie(string name, string rating, string duration)
+        public Movie(string name, int rating, int duration, Genre genre)
+            
         {
             Name = name;
             Rating = rating;
             Duration = duration;
+            theGenre = genre;
+        }
+
+        public override string ToString()
+        {
+
+            return Name + ", " + Duration + " minutes";
         }
     }
 }

@@ -9,16 +9,37 @@ namespace NetflixAndCSharp
 {
     public class Show : Title
     {
-        //-Overrides parent’s Rating to return an aggregated rating of Episode ratings 
-        //-Overrides ToString() method to return a string of the name of the show and number of episodes
-        //public string Name;
-        //public string Rating;
-        List<string> Episodes = new List<string>();
+        public List<Episode> Episodes = new List<Episode>();
 
-        public Show(string name, string rating)
+        public Show()
+        {
+        }
+        public Show(string name, int rating, Genre genre)
         {
             Name = name;
             Rating = rating;
+            theGenre = genre;
+        }
+
+        public override string ToString()
+        {
+            return Name + ", " + Episodes.Count + " episodes";
+        }
+
+        public override int? Rating
+        {
+            get
+            {
+                int i = 0;
+                foreach (var episode in  Episodes)
+                {
+                    rating = rating + Episodes[i].Rating;
+                    i++;
+                }
+                return rating;
+            }
+            set { rating = value; }
+            
         }
     }
 }

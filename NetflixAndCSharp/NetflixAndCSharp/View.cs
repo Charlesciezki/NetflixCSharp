@@ -8,14 +8,20 @@ namespace NetflixAndCSharp
 {
     public class View
     {
+        public Catalog theCatalog;
+
+        public View(Catalog catalog)
+        {
+            theCatalog = catalog;
+        }
         public void PrintOutGenres()
         {
-            
-        }
-
-        public void PrintOutGenreTitles()
-        {
-            
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            foreach (Genre genresInList in theCatalog.Genres)
+            {
+                Console.WriteLine(genresInList.genre);
+            }
         }
     }
-}
+    }
+

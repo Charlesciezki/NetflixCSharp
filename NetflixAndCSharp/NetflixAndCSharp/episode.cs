@@ -8,11 +8,12 @@ namespace NetflixAndCSharp
 {
     public class Episode
     {
-        string Rating;
+        public int Rating;
 
-        public Episode(string rating)
+        public Episode(int rating)
         {
             Rating = rating;
         }
     }
 }
+

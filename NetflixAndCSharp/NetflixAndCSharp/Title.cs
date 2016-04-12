@@ -8,14 +8,36 @@ namespace NetflixAndCSharp
 {
     public class Title
     {
-        //-Overload plus(+) operator to take in two Titles and return an aggregated Genre 
-        //-Offer two overloaded constructors: one that takes in all the fields and sets them, another that takes in no fields and sets the internal fields to null
-        public string Name;
-        public string Rating;
+        public string Name { get; set; }
+        protected int? rating;
+        public string title;
+        public Genre theGenre;
+        public virtual int? Rating
+        {
+            get { return rating; }
+            set { rating = value; }
+        }
+
 
         public Title()
         {
+            Name = null;
+            rating = null;
+        }
 
+        public Title(string name, int rating)
+        {
+            Name = name;
+            this.rating = rating;
+
+        }
+
+        public static Genre operator +(Title title1, Title title2)
+        {
+            Genre tempGenre = new Genre(title1.theGenre.genre + title2.theGenre.genre);
+            tempGenre.TitleList.AddRange(title1.theGenre.TitleList);
+            tempGenre.TitleList.AddRange(title2.theGenre.TitleList);
+            return tempGenre;
         }
     }
 
