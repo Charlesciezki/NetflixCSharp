@@ -13,6 +13,7 @@ namespace NetflixAndCSharp
 
         public Show()
         {
+
         }
         public Show(string name, int rating, Genre genre)
         {

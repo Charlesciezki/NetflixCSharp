@@ -24,7 +24,6 @@ namespace NetflixAndCSharp
             return tempGenre;
         }
 
-        //public static 
     }
 }
 
